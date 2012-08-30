@@ -44,9 +44,8 @@
       data: data,
       dataType: "json",
       success: function(response){
-        if ( response.success ) {
-        } else {
-        }
+        $('#thanks').slideDown();
+
       }
     });
 
