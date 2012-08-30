@@ -1,0 +1,28 @@
+# Use PostgreSQL
+
+development:
+  adapter: postgresql
+  database: mail_my_mom_development
+  pool: 5
+  timeout: 5000
+  username: andreas
+  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: mail_my_mom_test
+  pool: 5
+  timeout: 5000
+  username: andreas
+  password:
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: mail_my_mom_production
+  timeout: 5000
+  pool: 5
+  username: andreas
+  password:
+  host: localhost
