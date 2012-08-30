@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :option1, :option2, :option3
 
-  before_create :process_options
+  after_create :process_options
   after_create :send_email
 
 

@@ -1,2 +1,1 @@
-<% debugger %>
-Hi Mom, I missed you! Today I went <%= Option.where(:user_id => @user.id).where(:option_id => 1).first %> with <%= Option.where(:user_id => @user.id).where(:option_id => 2).first %>. We had a lot of fun! I was thinking about you and decided to touch base. Hope things are <%= Option.where(:user_id => @user.id).where(:option_id => 3).first %>,  miss you!
+Hi Mom, I missed you! Today I went <%= Option.where(:user_id => @user.id).where(:option_id => 1).first.option %> with <%= Option.where(:user_id => @user.id).where(:option_id => 2).first.option %>. We had a lot of fun! I was thinking about you and decided to touch base. Hope things are <%= Option.where(:user_id => @user.id).where(:option_id => 3).first.option %>,  miss you!
