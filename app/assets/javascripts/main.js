@@ -22,14 +22,16 @@
   app.handleFormSubmission = function(e){
     var $this = $(this);
     var data = {
-      option_1: $this.find('input[name="user[option1]"]').val(),
-      option_2: $this.find('input[name="user[option2]"]').val(),
-      option_3: $this.find('input[name="user[option3]"]').val(),
-      email: $this.find('input[name="user[email]"]').val(),
-      nickname: $this.find('input[name="user[nickname]"]').val(),
-      momsemail: $this.find('input[name="user[momsemail]"]').val(),
-      frequency: $this.find('input[name="user[frequency]"]').val(),
-      template: app.serializeTemplate($this.find('p.template'))
+      user: {
+        option_1: $this.find('input[name="user[option_1]"]').val(),
+        option_2: $this.find('input[name="user[option_2]"]').val(),
+        option_3: $this.find('input[name="user[option_3]"]').val(),
+        email: $this.find('input[name="user[email]"]').val(),
+        nickname: $this.find('input[name="user[nickname]"]').val(),
+        momsemail: $this.find('input[name="user[momsemail]"]').val(),
+        frequency: $this.find('input[name="user[frequency]"]').val(),
+        template: app.serializeTemplate($this.find('p.template'))
+      }
     };
 
     $.ajax({
