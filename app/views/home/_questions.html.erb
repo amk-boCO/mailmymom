@@ -23,6 +23,10 @@
         <%= f.select :frequency, ['Once a week', 'Once every two weeks', 'Once every four weeks'], :prompt => "Please select one" %>
       </div>
 
+      <h3>Design your email template:</h3>
+
+      <p class="template"><span contenteditable>Hi Mom, I missed you! Today I went </span><input name="user[option1]" placeholder="snowboarding,hiking,biking" /> with <input name="user[option2]" placeholder="Mike,Tracy,Phil" />. We had a lot of fun! I was thinking about you and decided to touch base. Hope things are <input name="user[option3]" placeholder="dandy,great,awesome,well" />, miss you!</p>
+
       <div class="form-row">
         <%= f.submit "Submit" %>
       </div>
