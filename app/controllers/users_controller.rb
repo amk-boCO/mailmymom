@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def create
-    debugger
+    @user = User.create(params[:user])
   end
 
 end
