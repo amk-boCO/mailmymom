@@ -3,19 +3,29 @@
     <h1>Get started</h1>
     <%= form_for @user, :id => "js-user-new-form" do |f| %>
 
-      <h3>What's your email?</h3>
-      <%= f.text_field :email %>
+      <div class="form-row name">
+        <label>What's your email?</label>
+        <%= f.text_field :email %>
+      </div>
 
-      <h3>What does your mom know you as?</h3>
-      <%= f.text_field :nickname %>
+      <div class="form-row nickname">
+        <label>What does your mom know you as?</label>
+        <%= f.text_field :nickname %>
+      </div>
 
-      <h3>What's your mom's email?</h3>
-      <%= f.text_field :moms_email %>
+      <div class="form-row">
+        <label>What's your mom's email?</label>
+        <%= f.text_field :moms_email %>
+      </div>
 
-      <h3>How often should we email?</h3>
-      <%= f.select :frequency, ['Once a week', 'Once every two weeks', 'Once every four weeks'], :prompt => "Please select one" %>
+      <div class="form-row">
+        <label>How often should we email?</label>
+        <%= f.select :frequency, ['Once a week', 'Once every two weeks', 'Once every four weeks'], :prompt => "Please select one" %>
+      </div>
 
-      <%= f.submit "Submit" %>
+      <div class="form-row">
+        <%= f.submit "Submit" %>
+      </div>
 
     <% end %>
   </div>
