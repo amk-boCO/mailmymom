@@ -21,3 +21,5 @@ input[type="text"] { width: 235px; padding: 10px; border: 2px solid #545454; }
 
 .form-row.name,
 .form-row.nickname { width: 300px; float: left; clear: none; }
+
+.btn-large { margin: 25px 0; }
