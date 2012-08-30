@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'pg'
 
 gem "twitter-bootstrap-rails", :group => :assets
+gem 'sendgrid'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
 
   def create
-    @user = User.create(params[:user])
+    if @user = User.create(params[:user])
+      response = { :success => true }
+    else
+      response = { :success => false }
+    end
+
+    render :json => response
   end
 
 end
