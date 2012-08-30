@@ -27,14 +27,13 @@
     var $this = $(this);
     var data = {
       user: {
-        option_1: $this.find('input[name="user[option_1]"]').val(),
-        option_2: $this.find('input[name="user[option_2]"]').val(),
-        option_3: $this.find('input[name="user[option_3]"]').val(),
+        option1: $this.find('input[name="user[option1]"]').val(),
+        option2: $this.find('input[name="user[option2]"]').val(),
+        option3: $this.find('input[name="user[option3]"]').val(),
         email: $this.find('input[name="user[email]"]').val(),
         nickname: $this.find('input[name="user[nickname]"]').val(),
         moms_email: $this.find('input[name="user[moms_email]"]').val(),
-        frequency: $this.find('input[name="user[frequency]"]').val(),
-        template: app.serializeTemplate($this.find('p.template'))
+        frequency: $this.find('input[name="user[frequency]"]').val()
       }
     };
 
