@@ -13,13 +13,17 @@
 
   app.serializeTemplate = function($template) {
     var template = "";
-    $.each($template.find('*'), function(i, $obj) {
+    $.each($template.find('*'), function(i, obj) {
+      var $obj = $(obj);
       template+=$obj.is('span') ? $obj.text() : "#{"+$obj.attr('name')+"}";
     });
     return template;
   };
 
   app.handleFormSubmission = function(e){
+    e.preventDefault();
+    e.stopPropagation();
+
     var $this = $(this);
     var data = {
       user: {
@@ -28,7 +32,7 @@
         option_3: $this.find('input[name="user[option_3]"]').val(),
         email: $this.find('input[name="user[email]"]').val(),
         nickname: $this.find('input[name="user[nickname]"]').val(),
-        momsemail: $this.find('input[name="user[momsemail]"]').val(),
+        moms_email: $this.find('input[name="user[moms_email]"]').val(),
         frequency: $this.find('input[name="user[frequency]"]').val(),
         template: app.serializeTemplate($this.find('p.template'))
       }
