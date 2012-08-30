@@ -1,19 +1,21 @@
-<div>
-  <%= form_for @user, :id => "js-user-new-form" do |f| %>
+<div class="row">
+  <div class="span8">
+    <%= form_for @user, :id => "js-user-new-form" do |f| %>
 
-    <h3>What's your email?</h3>
-    <%= f.text_field :email %>
+      <h3>What's your email?</h3>
+      <%= f.text_field :email %>
 
-    <h3>What does your mom know you as?</h3>
-    <%= f.text_field :nickname %>
+      <h3>What does your mom know you as?</h3>
+      <%= f.text_field :nickname %>
 
-    <h3>What's your mom's email?</h3>
-    <%= f.text_field :moms_email %>
+      <h3>What's your mom's email?</h3>
+      <%= f.text_field :moms_email %>
 
-    <h3>How often should we email?</h3>
-    <%= f.select :frequency, ['Once a week', 'Once every two weeks', 'Once every four weeks'], :prompt => "Please select one" %>
+      <h3>How often should we email?</h3>
+      <%= f.select :frequency, ['Once a week', 'Once every two weeks', 'Once every four weeks'], :prompt => "Please select one" %>
 
-    <%= f.submit "Submit" %>
+      <%= f.submit "Submit" %>
 
-  <% end %>
+    <% end %>
+  </div>
 </div>
