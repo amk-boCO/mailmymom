@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120830010800) do
+ActiveRecord::Schema.define(:version => 20120830030930) do
+
+  create_table "options", :force => true do |t|
+    t.integer "user_id"
+    t.integer "option_id"
+    t.string  "option"
+  end
 
   create_table "users", :force => true do |t|
     t.string "email",      :limit => 100
